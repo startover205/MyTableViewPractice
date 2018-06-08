@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C02AA47520C7D5DF000808F4 /* HomeworkDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02AA47420C7D5DF000808F4 /* HomeworkDetailTableViewController.swift */; };
+		C030045120C770ED00C53572 /* HomeworkIsDone.swift in Sources */ = {isa = PBXBuildFile; fileRef = C030045020C770ED00C53572 /* HomeworkIsDone.swift */; };
+		C030045320C774A800C53572 /* HomeworkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C030045220C774A800C53572 /* HomeworkTableViewController.swift */; };
+		C030045520C77EB400C53572 /* AssignDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C030045420C77EB400C53572 /* AssignDate.swift */; };
+		C030047520C7C37900C53572 /* HomeworkDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C030047420C7C37900C53572 /* HomeworkDetailTableViewCell.swift */; };
 		C063F31120C684A3005AA9C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C063F31020C684A3005AA9C1 /* AppDelegate.swift */; };
 		C063F31320C684A3005AA9C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C063F31220C684A3005AA9C1 /* ViewController.swift */; };
 		C063F31620C684A3005AA9C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C063F31420C684A3005AA9C1 /* Main.storyboard */; };
@@ -14,6 +19,8 @@
 		C063F31B20C684A7005AA9C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C063F31920C684A7005AA9C1 /* LaunchScreen.storyboard */; };
 		C063F32620C684A7005AA9C1 /* iContactTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C063F32520C684A7005AA9C1 /* iContactTests.swift */; };
 		C063F33120C684A7005AA9C1 /* iContactUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C063F33020C684A7005AA9C1 /* iContactUITests.swift */; };
+		C063F33F20C684DD005AA9C1 /* HomeworkStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C063F33E20C684DD005AA9C1 /* HomeworkStoryboard.storyboard */; };
+		C063F34120C68C2D005AA9C1 /* Homework.swift in Sources */ = {isa = PBXBuildFile; fileRef = C063F34020C68C2D005AA9C1 /* Homework.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,19 +41,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C063F30D20C684A3005AA9C1 /* iContact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iContact.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C02AA47420C7D5DF000808F4 /* HomeworkDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkDetailTableViewController.swift; sourceTree = "<group>"; };
+		C030045020C770ED00C53572 /* HomeworkIsDone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkIsDone.swift; sourceTree = "<group>"; };
+		C030045220C774A800C53572 /* HomeworkTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkTableViewController.swift; sourceTree = "<group>"; };
+		C030045420C77EB400C53572 /* AssignDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignDate.swift; sourceTree = "<group>"; };
+		C030047420C7C37900C53572 /* HomeworkDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkDetailTableViewCell.swift; sourceTree = "<group>"; };
+		C063F30D20C684A3005AA9C1 /* MyTableViewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTableViewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C063F31020C684A3005AA9C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C063F31220C684A3005AA9C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C063F31520C684A3005AA9C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C063F31720C684A7005AA9C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C063F31A20C684A7005AA9C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C063F31C20C684A7005AA9C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C063F32120C684A7005AA9C1 /* iContactTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iContactTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C063F32120C684A7005AA9C1 /* MyTableViewAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTableViewAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C063F32520C684A7005AA9C1 /* iContactTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iContactTests.swift; sourceTree = "<group>"; };
 		C063F32720C684A7005AA9C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C063F32C20C684A7005AA9C1 /* iContactUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iContactUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C063F32C20C684A7005AA9C1 /* MyTableViewAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTableViewAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C063F33020C684A7005AA9C1 /* iContactUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iContactUITests.swift; sourceTree = "<group>"; };
 		C063F33220C684A7005AA9C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C063F33E20C684DD005AA9C1 /* HomeworkStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeworkStoryboard.storyboard; sourceTree = "<group>"; };
+		C063F34020C68C2D005AA9C1 /* Homework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homework.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,9 +101,9 @@
 		C063F30E20C684A3005AA9C1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C063F30D20C684A3005AA9C1 /* iContact.app */,
-				C063F32120C684A7005AA9C1 /* iContactTests.xctest */,
-				C063F32C20C684A7005AA9C1 /* iContactUITests.xctest */,
+				C063F30D20C684A3005AA9C1 /* MyTableViewApp.app */,
+				C063F32120C684A7005AA9C1 /* MyTableViewAppTests.xctest */,
+				C063F32C20C684A7005AA9C1 /* MyTableViewAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,8 +112,15 @@
 			isa = PBXGroup;
 			children = (
 				C063F31020C684A3005AA9C1 /* AppDelegate.swift */,
+				C063F34020C68C2D005AA9C1 /* Homework.swift */,
+				C030045020C770ED00C53572 /* HomeworkIsDone.swift */,
+				C030045420C77EB400C53572 /* AssignDate.swift */,
 				C063F31220C684A3005AA9C1 /* ViewController.swift */,
+				C030045220C774A800C53572 /* HomeworkTableViewController.swift */,
 				C063F31420C684A3005AA9C1 /* Main.storyboard */,
+				C063F33E20C684DD005AA9C1 /* HomeworkStoryboard.storyboard */,
+				C02AA47420C7D5DF000808F4 /* HomeworkDetailTableViewController.swift */,
+				C030047420C7C37900C53572 /* HomeworkDetailTableViewCell.swift */,
 				C063F31720C684A7005AA9C1 /* Assets.xcassets */,
 				C063F31920C684A7005AA9C1 /* LaunchScreen.storyboard */,
 				C063F31C20C684A7005AA9C1 /* Info.plist */,
@@ -128,9 +149,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C063F30C20C684A3005AA9C1 /* iContact */ = {
+		C063F30C20C684A3005AA9C1 /* MyTableViewApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C063F33520C684A7005AA9C1 /* Build configuration list for PBXNativeTarget "iContact" */;
+			buildConfigurationList = C063F33520C684A7005AA9C1 /* Build configuration list for PBXNativeTarget "MyTableViewApp" */;
 			buildPhases = (
 				C063F30920C684A3005AA9C1 /* Sources */,
 				C063F30A20C684A3005AA9C1 /* Frameworks */,
@@ -140,14 +161,14 @@
 			);
 			dependencies = (
 			);
-			name = iContact;
+			name = MyTableViewApp;
 			productName = iContact;
-			productReference = C063F30D20C684A3005AA9C1 /* iContact.app */;
+			productReference = C063F30D20C684A3005AA9C1 /* MyTableViewApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C063F32020C684A7005AA9C1 /* iContactTests */ = {
+		C063F32020C684A7005AA9C1 /* MyTableViewAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C063F33820C684A7005AA9C1 /* Build configuration list for PBXNativeTarget "iContactTests" */;
+			buildConfigurationList = C063F33820C684A7005AA9C1 /* Build configuration list for PBXNativeTarget "MyTableViewAppTests" */;
 			buildPhases = (
 				C063F31D20C684A7005AA9C1 /* Sources */,
 				C063F31E20C684A7005AA9C1 /* Frameworks */,
@@ -158,14 +179,14 @@
 			dependencies = (
 				C063F32320C684A7005AA9C1 /* PBXTargetDependency */,
 			);
-			name = iContactTests;
+			name = MyTableViewAppTests;
 			productName = iContactTests;
-			productReference = C063F32120C684A7005AA9C1 /* iContactTests.xctest */;
+			productReference = C063F32120C684A7005AA9C1 /* MyTableViewAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		C063F32B20C684A7005AA9C1 /* iContactUITests */ = {
+		C063F32B20C684A7005AA9C1 /* MyTableViewAppUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C063F33B20C684A7005AA9C1 /* Build configuration list for PBXNativeTarget "iContactUITests" */;
+			buildConfigurationList = C063F33B20C684A7005AA9C1 /* Build configuration list for PBXNativeTarget "MyTableViewAppUITests" */;
 			buildPhases = (
 				C063F32820C684A7005AA9C1 /* Sources */,
 				C063F32920C684A7005AA9C1 /* Frameworks */,
@@ -176,9 +197,9 @@
 			dependencies = (
 				C063F32E20C684A7005AA9C1 /* PBXTargetDependency */,
 			);
-			name = iContactUITests;
+			name = MyTableViewAppUITests;
 			productName = iContactUITests;
-			productReference = C063F32C20C684A7005AA9C1 /* iContactUITests.xctest */;
+			productReference = C063F32C20C684A7005AA9C1 /* MyTableViewAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -204,7 +225,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C063F30820C684A3005AA9C1 /* Build configuration list for PBXProject "iContact" */;
+			buildConfigurationList = C063F30820C684A3005AA9C1 /* Build configuration list for PBXProject "MyTableViewApp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -217,9 +238,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C063F30C20C684A3005AA9C1 /* iContact */,
-				C063F32020C684A7005AA9C1 /* iContactTests */,
-				C063F32B20C684A7005AA9C1 /* iContactUITests */,
+				C063F30C20C684A3005AA9C1 /* MyTableViewApp */,
+				C063F32020C684A7005AA9C1 /* MyTableViewAppTests */,
+				C063F32B20C684A7005AA9C1 /* MyTableViewAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -230,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C063F31B20C684A7005AA9C1 /* LaunchScreen.storyboard in Resources */,
+				C063F33F20C684DD005AA9C1 /* HomeworkStoryboard.storyboard in Resources */,
 				C063F31820C684A7005AA9C1 /* Assets.xcassets in Resources */,
 				C063F31620C684A3005AA9C1 /* Main.storyboard in Resources */,
 			);
@@ -256,8 +278,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C02AA47520C7D5DF000808F4 /* HomeworkDetailTableViewController.swift in Sources */,
+				C030045520C77EB400C53572 /* AssignDate.swift in Sources */,
 				C063F31320C684A3005AA9C1 /* ViewController.swift in Sources */,
+				C030045120C770ED00C53572 /* HomeworkIsDone.swift in Sources */,
 				C063F31120C684A3005AA9C1 /* AppDelegate.swift in Sources */,
+				C030047520C7C37900C53572 /* HomeworkDetailTableViewCell.swift in Sources */,
+				C030045320C774A800C53572 /* HomeworkTableViewController.swift in Sources */,
+				C063F34120C68C2D005AA9C1 /* Homework.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,12 +310,12 @@
 /* Begin PBXTargetDependency section */
 		C063F32320C684A7005AA9C1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C063F30C20C684A3005AA9C1 /* iContact */;
+			target = C063F30C20C684A3005AA9C1 /* MyTableViewApp */;
 			targetProxy = C063F32220C684A7005AA9C1 /* PBXContainerItemProxy */;
 		};
 		C063F32E20C684A7005AA9C1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C063F30C20C684A3005AA9C1 /* iContact */;
+			target = C063F30C20C684A3005AA9C1 /* MyTableViewApp */;
 			targetProxy = C063F32D20C684A7005AA9C1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -436,7 +464,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mingtayang.iContact;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mingtayang.mytableviewapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -453,7 +481,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mingtayang.iContact;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mingtayang.mytableviewapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -476,7 +504,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iContact.app/iContact";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyTableViewApp.app/MyTableViewApp";
 			};
 			name = Debug;
 		};
@@ -496,7 +524,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iContact.app/iContact";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyTableViewApp.app/MyTableViewApp";
 			};
 			name = Release;
 		};
@@ -541,7 +569,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C063F30820C684A3005AA9C1 /* Build configuration list for PBXProject "iContact" */ = {
+		C063F30820C684A3005AA9C1 /* Build configuration list for PBXProject "MyTableViewApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C063F33320C684A7005AA9C1 /* Debug */,
@@ -550,7 +578,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C063F33520C684A7005AA9C1 /* Build configuration list for PBXNativeTarget "iContact" */ = {
+		C063F33520C684A7005AA9C1 /* Build configuration list for PBXNativeTarget "MyTableViewApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C063F33620C684A7005AA9C1 /* Debug */,
@@ -559,7 +587,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C063F33820C684A7005AA9C1 /* Build configuration list for PBXNativeTarget "iContactTests" */ = {
+		C063F33820C684A7005AA9C1 /* Build configuration list for PBXNativeTarget "MyTableViewAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C063F33920C684A7005AA9C1 /* Debug */,
@@ -568,7 +596,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C063F33B20C684A7005AA9C1 /* Build configuration list for PBXNativeTarget "iContactUITests" */ = {
+		C063F33B20C684A7005AA9C1 /* Build configuration list for PBXNativeTarget "MyTableViewAppUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C063F33C20C684A7005AA9C1 /* Debug */,

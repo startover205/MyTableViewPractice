@@ -48,8 +48,8 @@ class HomeworkDetailTableViewController: UITableViewController {
         
         
         if let homework = homework {
-            homework.subject = subjectTextField.text
-            homework.title = titleTextField.text
+            homework.subject = subjectTextField.text!
+            homework.title = titleTextField.text!
             homework.content = contentTextView.text
         }else{
             homework = Homework(id: 13, subject: subjectTextField.text!, teacher: "Sam", title: titleTextField.text!, content: contentTextView.text, date: Date())
@@ -80,16 +80,7 @@ class HomeworkDetailTableViewController: UITableViewController {
         }
       
         
-        //非老師
-        if isTeacher == false {
-            updateBarButtonItem.isEnabled = false
-            updateBarButtonItem.tintColor = .clear
-            titleTextField.isEnabled = false
-            titleTextField.backgroundColor = .clear
-            contentTextView.isEditable = false
-            
-            
-        }
+       
         
         
         

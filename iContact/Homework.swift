@@ -11,12 +11,18 @@ import Foundation
 class Homework:CustomStringConvertible {
     var description: String {
         
-        return "id: \(id ?? 0), subjectId: \(subjectId ?? 0), teacherId: \(teacherId ?? 0), classId: \(classId ?? 0), subject: \(subject ?? ""), teacher: \(teacher ?? ""), title: \(title ?? ""), content: \(content ?? ""), date: \(date ?? Date())"
+        return "id: \(id ), subjectId: \(subjectId), teacherId: \(teacherId), classId: \(classId), subject: \(subject), teacher: \(teacher), title: \(title), content: \(content), date: \(date )"
     }
     
-    var id, subjectId, teacherId, classId:Int?
-    var subject, teacher, title, content:String?
-    var date:Date?
+    var id = 0
+    var subjectId = 0
+    var teacherId = 0
+    var classId = 0
+    var subject = ""
+    var teacher = ""
+    var title = ""
+    var content = ""
+    var date:Date = Date()
     
     init() {
     }

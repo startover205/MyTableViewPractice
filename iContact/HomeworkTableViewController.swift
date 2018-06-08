@@ -8,10 +8,10 @@
 
 import UIKit
 
-var isTeacher = true
-
 class HomeworkTableViewController: UITableViewController {
-    var homeworkIsDoneList = [Homework]()
+    let userDefaults = UserDefaults.standard
+    
+    var homeworkList = [Homework]()
     //    var assingDateList = [AssignDate]()
     
     
@@ -24,18 +24,42 @@ class HomeworkTableViewController: UITableViewController {
         if let homework = noti.userInfo!["updateHomework"] as? Homework {
             if let indexPath = tableView.indexPathForSelectedRow{
                 
-                homeworkIsDoneList[indexPath.row] = homework
+                homeworkList[indexPath.row] = homework
             }else{
-                homeworkIsDoneList.insert(homework, at: 0)
+                homeworkList.insert(homework, at: 0)
             }
             tableView.reloadData()
+            
+            saveData()
             
         }
         
         
         
+       
+        
     }
     
+    func saveData(){
+        let homeworkDics = homeworkList.map { (homework) -> [String : Any?] in
+            
+            
+            return ["id":homework.id,
+                    "classId":homework.classId,
+                    "subject":homework.subject,
+                    "subjectId":homework.subjectId,
+                    "teacher":homework.teacher,
+                    "teacherId":homework.teacherId,
+                    "title":homework.title,
+                    "content":homework.content,
+                    "date":homework.date,
+                    ]
+            
+        }
+        
+        userDefaults.set(homeworkDics, forKey: "homeworkList")
+        
+    }
     
     @IBAction func startEditMode(_ sender: UIBarButtonItem) {
         
@@ -44,7 +68,7 @@ class HomeworkTableViewController: UITableViewController {
             editHomeworkBarButtonItem.title = "完成"
         }else{
             editHomeworkBarButtonItem.title = "編輯"
-
+            
         }
         
         
@@ -65,35 +89,49 @@ class HomeworkTableViewController: UITableViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(updateHomework(noti:)), name: Notification.Name.updateHomework, object: nil)
         
         
-        //非老師
-        if isTeacher == false {
-            addHomeworkBarButtonItem.isEnabled = false
-            addHomeworkBarButtonItem.tintColor = .clear
+        
+        if let homeworkDics = userDefaults.array(forKey: "homeworkList") as? [[String:Any?]]{
             
+            let homeworkList = homeworkDics.map { homeworkDic -> Homework in
+              
+                
+                let id  = homeworkDic["id"] as! Int
+                let classId  = homeworkDic["classId"] as! Int
+                let subject  = homeworkDic["subject"] as! String
+                let subjectId  = homeworkDic["subjectId"] as! Int
+                let teacher  = homeworkDic["teacher"] as! String
+                let teacherId  = homeworkDic["teacherId"] as! Int
+                let title  = homeworkDic["title"] as! String
+                let content  = homeworkDic["content"] as! String
+                let date  = homeworkDic["date"] as! Date
+                
+                return Homework(id: id, subject: subject, teacher: teacher, title: title, content: content, date: date)
+                
+            }
+            
+            self.homeworkList = homeworkList
+            
+        }else{
+            homeworkList.append(Homework(id: 1,  subject: "Xcode", teacher: "Peter", title: "Ex02", content: "1234", date: Date()))
+            homeworkList.append(Homework(id: 2,  subject: "Swift", teacher: "Peter", title: "Ex02", content: "1234", date: Date()))
+            homeworkList.append(Homework(id: 3,  subject: "Xcode", teacher: "Chen", title: "Ex04", content: "234", date: Date()))
+            homeworkList.append(Homework(id: 4,  subject: "Java", teacher: "Peter", title: "Ex02", content: "1234", date: Date()))
+            homeworkList.append(Homework(id: 5,  subject: "Xcode", teacher: "Kent", title: "Ex02", content: "122341234", date: Date()))
+            homeworkList.append(Homework(id: 6,  subject: "Swift", teacher: "Amy", title: "Ex06", content: "123424", date: Date()))
+            homeworkList.append(Homework(id: 7,  subject: "Android", teacher: "Peter", title: "Ex01", content: "122334", date: Date()))
+            homeworkList.append(Homework(id: 8,  subject: "SQL", teacher: "Zack", title: "Ex02", content: "123423434", date: Date()))
+            homeworkList.append(Homework(id: 9,  subject: "Xcode", teacher: "Peter", title: "Ex04", content: "234234", date: Date()))
+            homeworkList.append(Homework(id: 10,  subject: "Java", teacher: "Ron", title: "Ex02", content: "12334", date: Date()))
+            homeworkList.append(Homework(id: 11,  subject: "Android", teacher: "John", title: "Ex08", content: "5555", date: Date()))
+            homeworkList.append(Homework(id: 12,  subject: "Java", teacher: "Peter", title: "Ex07", content: "4545", date: Date()))
+            homeworkList.append(Homework(id: 13,  subject: "SQL", teacher: "Peter", title: "Ex09", content: "1212123", date: Date()))
         }
         
         
-        
-        
-        homeworkIsDoneList.append(HomeworkIsDone(id: 1,  subject: "Xcode", teacher: "Peter", title: "Ex02", content: "1234", date: Date(), isHomeworkDone: false))
-        homeworkIsDoneList.append(HomeworkIsDone(id: 2,  subject: "Swift", teacher: "Peter", title: "Ex02", content: "1234", date: Date(), isHomeworkDone: true))
-        homeworkIsDoneList.append(HomeworkIsDone(id: 3,  subject: "Xcode", teacher: "Chen", title: "Ex04", content: "234", date: Date(), isHomeworkDone: true))
-        homeworkIsDoneList.append(HomeworkIsDone(id: 4,  subject: "Java", teacher: "Peter", title: "Ex02", content: "1234", date: Date(), isHomeworkDone: true))
-        homeworkIsDoneList.append(HomeworkIsDone(id: 5,  subject: "Xcode", teacher: "Kent", title: "Ex02", content: "122341234", date: Date(), isHomeworkDone: false))
-        homeworkIsDoneList.append(HomeworkIsDone(id: 6,  subject: "Swift", teacher: "Amy", title: "Ex06", content: "123424", date: Date(), isHomeworkDone: true))
-        homeworkIsDoneList.append(HomeworkIsDone(id: 7,  subject: "Android", teacher: "Peter", title: "Ex01", content: "122334", date: Date(), isHomeworkDone: true))
-        homeworkIsDoneList.append(HomeworkIsDone(id: 8,  subject: "SQL", teacher: "Zack", title: "Ex02", content: "123423434", date: Date(), isHomeworkDone: false))
-        homeworkIsDoneList.append(HomeworkIsDone(id: 9,  subject: "Xcode", teacher: "Peter", title: "Ex04", content: "234234", date: Date(), isHomeworkDone: false))
-        homeworkIsDoneList.append(HomeworkIsDone(id: 10,  subject: "Java", teacher: "Ron", title: "Ex02", content: "12334", date: Date(), isHomeworkDone: true))
-        homeworkIsDoneList.append(HomeworkIsDone(id: 11,  subject: "Android", teacher: "John", title: "Ex08", content: "5555", date: Date(), isHomeworkDone: true))
-        homeworkIsDoneList.append(HomeworkIsDone(id: 12,  subject: "Java", teacher: "Peter", title: "Ex07", content: "4545", date: Date(), isHomeworkDone: false))
-        homeworkIsDoneList.append(HomeworkIsDone(id: 13,  subject: "SQL", teacher: "Peter", title: "Ex09", content: "1212123", date: Date(), isHomeworkDone: false))
-        
-        
-        //        for homeworkIsDone in homeworkIsDoneList {
+        //        for Homework in HomeworkList {
         //
         //
-        ////            homeworkIsDone.date
+        ////            Homework.date
         ////            let assignDate = AssignDate(assinDate: Date)
         //
         //
@@ -128,7 +166,7 @@ class HomeworkTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return homeworkIsDoneList.count
+        return homeworkList.count
     }
     
     
@@ -136,26 +174,15 @@ class HomeworkTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell", for: indexPath) as? HomeworkDetailTableViewCell
         
-        cell?.subjectLabel.text = homeworkIsDoneList[indexPath.row].subject
-        cell?.titleLabel.text = homeworkIsDoneList[indexPath.row].title
+        cell?.subjectLabel.text = homeworkList[indexPath.row].subject
+        cell?.titleLabel.text = homeworkList[indexPath.row].title
         
-        if isTeacher == false, let homeworkIsDone = homeworkIsDoneList[indexPath.row] as? HomeworkIsDone{
-            
-            cell?.completionLabel.isHidden = false
-            
-            if homeworkIsDone.isHomeworkDone! {
-                cell?.completionLabel.text = ""
-                
-            }else{
-                cell?.completionLabel.text = "未完成"
-                
-            }
-        }
+   
         
         return cell!
     }
     
- 
+    
     
     
     
@@ -168,39 +195,41 @@ class HomeworkTableViewController: UITableViewController {
      */
     
     
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-        homeworkIsDoneList.remove(at: indexPath.row)
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-
-
-
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-        
-        let homework = homeworkIsDoneList[fromIndexPath.row] //取出
-        homeworkIsDoneList.remove(at: fromIndexPath.row) //移除
-        homeworkIsDoneList.insert(homework, at: to.row) //插入
-        
-     
-     }
+    // Override to support editing the table view.
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Delete the row from the data source
+            homeworkList.remove(at: indexPath.row)
+            saveData()
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+        } else if editingStyle == .insert {
+            
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }
+    }
     
     
     
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
+    // Override to support rearranging the table view.
+    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+        
+        let homework = homeworkList[fromIndexPath.row] //取出
+        homeworkList.remove(at: fromIndexPath.row) //移除
+        homeworkList.insert(homework, at: to.row) //插入
+        saveData()
+        
+    }
+    
+    
+    
+    // Override to support conditional rearranging of the table view.
+    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        // Return false if you do not want the item to be re-orderable.
         
         
-     return true
-     }
+        return true
+    }
     
     
     
@@ -215,7 +244,7 @@ class HomeworkTableViewController: UITableViewController {
         if let controller = segue.destination as? HomeworkDetailTableViewController{
             
             if let indexPath = tableView.indexPathForSelectedRow{
-                controller.homework = homeworkIsDoneList[indexPath.row]
+                controller.homework = homeworkList[indexPath.row]
             }
             
             

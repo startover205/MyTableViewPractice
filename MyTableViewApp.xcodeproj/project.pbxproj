@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C02AA47520C7D5DF000808F4 /* HomeworkDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02AA47420C7D5DF000808F4 /* HomeworkDetailTableViewController.swift */; };
-		C030045120C770ED00C53572 /* HomeworkIsDone.swift in Sources */ = {isa = PBXBuildFile; fileRef = C030045020C770ED00C53572 /* HomeworkIsDone.swift */; };
 		C030045320C774A800C53572 /* HomeworkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C030045220C774A800C53572 /* HomeworkTableViewController.swift */; };
-		C030045520C77EB400C53572 /* AssignDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C030045420C77EB400C53572 /* AssignDate.swift */; };
 		C030047520C7C37900C53572 /* HomeworkDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C030047420C7C37900C53572 /* HomeworkDetailTableViewCell.swift */; };
 		C063F31120C684A3005AA9C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C063F31020C684A3005AA9C1 /* AppDelegate.swift */; };
 		C063F31320C684A3005AA9C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C063F31220C684A3005AA9C1 /* ViewController.swift */; };
@@ -42,9 +40,7 @@
 
 /* Begin PBXFileReference section */
 		C02AA47420C7D5DF000808F4 /* HomeworkDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkDetailTableViewController.swift; sourceTree = "<group>"; };
-		C030045020C770ED00C53572 /* HomeworkIsDone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkIsDone.swift; sourceTree = "<group>"; };
 		C030045220C774A800C53572 /* HomeworkTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkTableViewController.swift; sourceTree = "<group>"; };
-		C030045420C77EB400C53572 /* AssignDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignDate.swift; sourceTree = "<group>"; };
 		C030047420C7C37900C53572 /* HomeworkDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkDetailTableViewCell.swift; sourceTree = "<group>"; };
 		C063F30D20C684A3005AA9C1 /* MyTableViewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTableViewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C063F31020C684A3005AA9C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -113,8 +109,6 @@
 			children = (
 				C063F31020C684A3005AA9C1 /* AppDelegate.swift */,
 				C063F34020C68C2D005AA9C1 /* Homework.swift */,
-				C030045020C770ED00C53572 /* HomeworkIsDone.swift */,
-				C030045420C77EB400C53572 /* AssignDate.swift */,
 				C063F31220C684A3005AA9C1 /* ViewController.swift */,
 				C030045220C774A800C53572 /* HomeworkTableViewController.swift */,
 				C063F31420C684A3005AA9C1 /* Main.storyboard */,
@@ -279,9 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C02AA47520C7D5DF000808F4 /* HomeworkDetailTableViewController.swift in Sources */,
-				C030045520C77EB400C53572 /* AssignDate.swift in Sources */,
 				C063F31320C684A3005AA9C1 /* ViewController.swift in Sources */,
-				C030045120C770ED00C53572 /* HomeworkIsDone.swift in Sources */,
 				C063F31120C684A3005AA9C1 /* AppDelegate.swift in Sources */,
 				C030047520C7C37900C53572 /* HomeworkDetailTableViewCell.swift in Sources */,
 				C030045320C774A800C53572 /* HomeworkTableViewController.swift in Sources */,
